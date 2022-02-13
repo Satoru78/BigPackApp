@@ -1,0 +1,57 @@
+﻿<Page x:Class="WpfBigPackApp.Views.Pages.ManagerPages.Agents.AgentsDataActionPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfBigPackApp.Views.Pages.ManagerPages.Agents"
+      FontFamily="Verdana"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AgentsDataActionPage">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="400"></ColumnDefinition>
+            <ColumnDefinition Width="400"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Image Height="200" Width="200" Name="Log" Source="{Binding Agent.GetLogotype}"></Image>
+            <Button Content="Выбрать" Name="SelectLogotype" Click="SelectLogotype_Click"></Button>
+        </StackPanel>
+        
+        <StackPanel Grid.Column="2" Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center">
+            
+            <TextBlock Text="Наименование компании:"></TextBlock>
+            <TextBox Width="200" Text="{Binding Agent.CompanyName}"></TextBox>
+
+            <TextBlock Text="Адрес:"></TextBlock>
+            <TextBox Width="200" Text="{Binding Agent.Adress}"></TextBox>
+
+            <TextBlock Text="ИНН:"></TextBlock>
+            <TextBox Width="200" Text="{Binding Agent.INN}"></TextBox>
+
+            <TextBlock Text="КПП:"></TextBlock>
+            <TextBox Width="200" Text="{Binding Agent.KPP}"></TextBox>
+
+            <TextBlock Text="Тип агента:"></TextBlock>
+            <ComboBox ItemsSource="{Binding AgentTypes}" SelectedItem="{Binding Agent.AgentType}" DisplayMemberPath="Title"></ComboBox>
+
+            <TextBlock Text="Ф.И.О Директора:"></TextBlock>
+            <ComboBox ItemsSource="{Binding DirectorNames}" SelectedItem="{Binding Agent.DirectorName}" DisplayMemberPath="DirectorFullName"></ComboBox>
+
+            <TextBlock Text="Телефон:"></TextBlock>
+            <TextBox Width="200" Text="{Binding Agent.Phone}"></TextBox>
+
+            <TextBlock Text="Приоритет:"></TextBlock>
+            <ComboBox ItemsSource="{Binding Priorities}" SelectedItem="{Binding Agent.Priority}" DisplayMemberPath="Title"></ComboBox>
+
+            <TextBlock Text="Точки продаж:"></TextBlock>
+            <ComboBox ItemsSource="{Binding PointsOfSales}" SelectedItem="{Binding Agent.PointsOfSales}" DisplayMemberPath="Title"></ComboBox>
+
+            <TextBlock Text="Роль:"></TextBlock>
+            <ComboBox ItemsSource="{Binding Roles}" SelectedItem="{Binding Agent.Role}" DisplayMemberPath="Title"></ComboBox>
+
+            <Button Content="Сохранить" Name="AgentDataSave" Click="AgentDataSave_Click" Margin="0,10,0,0"></Button>
+        </StackPanel>
+    </Grid>
+</Page>

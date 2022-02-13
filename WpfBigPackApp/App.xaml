@@ -1,0 +1,13 @@
+﻿<Application x:Class="WpfBigPackApp.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:WpfBigPackApp"
+             StartupUri="Views/Windows/AvtorizationWindow.xaml">
+    <Application.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="#FFC1C1"></Setter>
+            <Setter Property="Foreground" Value="#D32B39"></Setter>
+            <Setter Property="FontFamily" Value="Verdana"></Setter>
+        </Style>
+    </Application.Resources>
+</Application>

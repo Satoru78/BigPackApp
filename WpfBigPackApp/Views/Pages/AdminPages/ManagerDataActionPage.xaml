@@ -1,0 +1,29 @@
+﻿<Page x:Class="WpfBigPackApp.Views.Pages.AdminPages.ManagerDataActionPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfBigPackApp.Views.Pages.AdminPages"
+      FontFamily="Verdana"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Добавление и редактироание данных о менеджере">
+
+    <Grid>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock Text="Фамилия:"></TextBlock>
+            <TextBox Width="200" Text="{Binding Manager.FirstName}"></TextBox>
+            
+            <TextBlock Text="Имя:"></TextBlock>
+            <TextBox Width="200" Text="{Binding Manager.LastName}"></TextBox>
+            
+            <TextBlock Text="Email:"></TextBlock>
+            <TextBox Width="200" Text="{Binding Manager.Email}"></TextBox>
+            
+            <TextBlock Text="Роль:"></TextBlock>
+            <ComboBox ItemsSource="{Binding Roles}" SelectedItem="{Binding Manager.Role}" DisplayMemberPath="Title"></ComboBox>
+
+            <Button Content="Сохранить" Name="ManagerDataSave" Click="ManagerDataSave_Click" Margin="0,10,0,0"></Button>
+        </StackPanel>
+    </Grid>
+</Page>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="3f7c938981b045ec8432a4885b2f85b8" Name="Diagram1">
+        <EntityTypeShape EntityType="BigPackBaseModel.Agent" Width="1.5" PointX="3" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigPackBaseModel.AgentType" Width="1.5" PointX="0.75" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigPackBaseModel.DirectorName" Width="1.5" PointX="0.75" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigPackBaseModel.Employees" Width="1.5" PointX="10.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigPackBaseModel.Manager" Width="1.5" PointX="3" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigPackBaseModel.Materials" Width="1.5" PointX="8" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigPackBaseModel.MaterialsSupplier" Width="1.5" PointX="10.25" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigPackBaseModel.MaterialsType" Width="1.5" PointX="5.75" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigPackBaseModel.PointsOfSales" Width="1.5" PointX="0.75" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigPackBaseModel.Priority" Width="1.5" PointX="0.75" PointY="13.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigPackBaseModel.Role" Width="1.5" PointX="0.75" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigPackBaseModel.Supplier" Width="1.5" PointX="8" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigPackBaseModel.SupplierType" Width="1.5" PointX="5.75" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigPackBaseModel.sysdiagrams" Width="1.5" PointX="10.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigPackBaseModel.Unit" Width="1.5" PointX="5.75" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BigPackBaseModel.User" Width="1.5" PointX="3" PointY="11.625" IsExpanded="true" />
+        <AssociationConnector Association="BigPackBaseModel.FK_Agent_AgentType" ManuallyRouted="false" />
+        <AssociationConnector Association="BigPackBaseModel.FK_Agent_DirectorName" ManuallyRouted="false" />
+        <AssociationConnector Association="BigPackBaseModel.FK_Agent_PointsOfSales" ManuallyRouted="false" />
+        <AssociationConnector Association="BigPackBaseModel.FK_Agent_Priority" ManuallyRouted="false" />
+        <AssociationConnector Association="BigPackBaseModel.FK_Agent_Role" ManuallyRouted="false" />
+        <AssociationConnector Association="BigPackBaseModel.FK_Manager_Role" ManuallyRouted="false" />
+        <AssociationConnector Association="BigPackBaseModel.FK_Materials_MaterialsType" ManuallyRouted="false" />
+        <AssociationConnector Association="BigPackBaseModel.FK_Materials_Unit" ManuallyRouted="false" />
+        <AssociationConnector Association="BigPackBaseModel.FK_MaterialsSupplier_Materials" ManuallyRouted="false" />
+        <AssociationConnector Association="BigPackBaseModel.FK_MaterialsSupplier_Supplier" ManuallyRouted="false" />
+        <AssociationConnector Association="BigPackBaseModel.FK_User_Role" ManuallyRouted="false" />
+        <AssociationConnector Association="BigPackBaseModel.FK_Supplier_SupplierType" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
